@@ -1,0 +1,19 @@
+time_interval = [0, inf];
+
+plot_3d_linear(time, com_ik_x, com_ik_y, com_ik_z, com_x, com_y, ...
+               com_z, time_interval, 'CoM')
+           
+plot_3d_linear(time(1:length(lf_des_x)), lf_des_x, lf_des_y, lf_des_z, lf_x, lf_y, ...
+               lf_z, time_interval, 'Left Foot')
+
+plot_3d_angular(time(1:length(lf_des_x)), lf_des_roll, lf_des_pitch, lf_des_yaw, lf_roll, lf_pitch, ...
+               lf_yaw, time_interval, 'Left Foot')
+           
+plot_3d_linear(time, rf_des_x, rf_des_y, rf_des_z, rf_x, rf_y, ...
+               rf_z, time_interval, 'Right Foot')
+           
+plot_3d_angular(time, rf_des_roll, rf_des_pitch, rf_des_yaw, rf_roll, rf_pitch, ...
+               rf_yaw, time_interval, 'Right Foot')
+
+plot_3d_angular(time, torso_des_roll, torso_des_pitch, torso_des_yaw, torso_roll, torso_pitch, ...
+               torso_yaw, time_interval, 'Torso')
